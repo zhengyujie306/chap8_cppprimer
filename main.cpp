@@ -12,13 +12,7 @@ operator << (ostream& os, const student_information& x)
     os << x.getage() << '\t' << x.getsex() << endl;
     return os;
 }
-fstream&
-operator << (fstream& os, const student_information& x)
-{
-    os << x.getid() << '\t'<< x.getname() << '\t';
-    os << x.getage() << '\t' << x.getsex() << endl;
-    return os;
-}
+
 
 int main() {
     ifstream input;
@@ -42,7 +36,6 @@ int main() {
 
     student_information si("a", "a", 1, 2);
     cout << si;
-    output << si;
 
     string line, word;
     vector<PersonInfo> people;
